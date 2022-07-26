@@ -1,8 +1,8 @@
 <template>
-  <div class="box-equal gap-x-[10px]">
+  <nav class="box-equal gap-x-[10px]">
     <NuxtLink
       to="/"
-      class="h-[40px] w-[40px] min-h-[40px] min-w-[40px] max-h-[40px] max-w-[40px] rounded-full text-[20px] box-center bg-gradient-to-r from-indigo-500 font-bold"
+      class="h-[40px] w-[40px] min-h-[40px] min-w-[40px] max-h-[40px] max-w-[40px] rounded-full text-[20px] box-center bg-gradient-to-b from-indigo-500 font-bold"
     >
       M
     </NuxtLink>
@@ -20,7 +20,7 @@
         placeholder="Cari di Mabook"
       />
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

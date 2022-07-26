@@ -2,7 +2,7 @@
   <!-- <nav
     class="bg-gray-700 border-b border-gray-500 fixed inset-x-0 top-0 box-between text-white px-[10px] py-[5px]"
   > -->
-  <nav
+  <header
     class="bg-gray-700 border-b border-gray-500 fixed inset-x-0 top-0 text-white px-[10px] py-[5px] grid grid-cols-4 gap-x-[20px]"
   >
     <!-- img & search box -->
@@ -12,8 +12,8 @@
     <HeaderCenterItems class="col-span-2" />
 
     <!-- btns -->
-    <div class="col-span-1">asd</div>
-  </nav>
+    <HeaderRightItems class="col-span-1" />
+  </header>
 </template>
 
 <script>

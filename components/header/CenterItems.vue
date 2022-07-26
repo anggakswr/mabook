@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-5 gap-x-[5px]">
+  <nav class="grid grid-cols-5 gap-x-[5px]">
     <NuxtLink
       v-for="link in links"
       :key="link.icon"
@@ -13,7 +13,7 @@
         />
       </client-only>
     </NuxtLink>
-  </div>
+  </nav>
 </template>
 
 <script>
