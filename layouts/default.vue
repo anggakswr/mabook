@@ -3,11 +3,14 @@
     <Header />
 
     <LeftNav />
+
+    <!-- page -->
     <section class="grid grid-cols-4 pt-[70px]">
       <div class="col-span-1" />
-      <Nuxt class="col-span-2 px-[20px]" />
+      <Nuxt class="col-span-2 px-[40px]" />
       <div class="col-span-1" />
     </section>
+
     <RightNav />
   </main>
 </template>

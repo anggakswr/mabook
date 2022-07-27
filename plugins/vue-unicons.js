@@ -15,6 +15,7 @@ import {
   uniComment,
   uniBell,
   uniEllipsisH,
+  uniArrowRight,
 } from 'vue-unicons/dist/icons'
 
 Unicon.add([
@@ -32,6 +33,7 @@ Unicon.add([
   uniComment,
   uniBell,
   uniEllipsisH,
+  uniArrowRight,
 ])
 
 Vue.use(Unicon)
