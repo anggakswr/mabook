@@ -2,9 +2,13 @@
   <nav class="box-equal gap-x-[10px]">
     <NuxtLink
       to="/"
-      class="h-[40px] w-[40px] min-h-[40px] min-w-[40px] max-h-[40px] max-w-[40px] rounded-full text-[20px] box-center bg-gradient-to-b from-indigo-500 font-bold"
+      class="h-[40px] w-[40px] min-h-[40px] min-w-[40px] max-h-[40px] max-w-[40px] rounded-full text-[20px] bg-gradient-to-b from-indigo-500 to-blue-500 font-bold relative overflow-hidden"
     >
-      M
+      <span
+        class="absolute -bottom-[5px] inset-x-0 flex justify-center text-3xl"
+      >
+        M
+      </span>
     </NuxtLink>
 
     <div class="relative">

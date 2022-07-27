@@ -1,6 +1,8 @@
 <template>
   <!-- <div class="relative"> -->
-  <div class="overflow-y-scroll px-[10px]">
+  <nav
+    class="fixed w-1/4 left-0 top-[70px] bottom-0 overflow-y-scroll px-[10px]"
+  >
     <NuxtLink
       to="/profile"
       class="box-equal p-[10px] gap-x-[10px] hover:bg-gray-600 w-full rounded-lg"
@@ -30,10 +32,10 @@
       {{ link1.text }}
     </NuxtLink>
 
-    <hr class="border-t border-gray-700 mb-[10px]" />
+    <hr class="border-t border-gray-500 mb-[10px]" />
 
     <!-- footer text -->
-    <div class="text-sm">
+    <div class="text-sm text-gray-300">
       <NuxtLink to="#">Privasi</NuxtLink>
       &middot;
       <NuxtLink to="#">Ketentuan</NuxtLink>
@@ -42,7 +44,7 @@
       &middot;
       <p>Mabook &copy; {{ currentYear }}</p>
     </div>
-  </div>
+  </nav>
   <!-- </div> -->
 </template>
 

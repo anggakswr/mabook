@@ -9,7 +9,7 @@
       <client-only>
         <unicon
           :name="link.icon"
-          :fill="$route.path === link.url ? '#9400FF' : 'white'"
+          :fill="$route.path === link.url ? '#0a84ff' : 'white'"
         />
       </client-only>
     </NuxtLink>
@@ -36,6 +36,6 @@ export default {
 
 <style scoped>
 a.nuxt-link-exact-active {
-  @apply border-b-2 border-purple-500 rounded-none hover:bg-gray-700;
+  @apply border-b-2 border-blue-500 rounded-none hover:bg-gray-700;
 }
 </style>
