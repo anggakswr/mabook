@@ -13,7 +13,7 @@
 
     <NuxtLink
       to="#"
-      class="h-[40px] w-[40px] rounded-full"
+      class="h-[40px] w-[40px] rounded-full bg-cover bg-center"
       :style="{ backgroundImage: 'url(https://picsum.photos/40)' }"
     />
   </nav>

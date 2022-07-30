@@ -16,6 +16,10 @@ import {
   uniBell,
   uniEllipsisH,
   uniArrowRight,
+  uniImage,
+  uniThumbsUp,
+  uniChat,
+  uniShare,
 } from 'vue-unicons/dist/icons'
 
 Unicon.add([
@@ -34,6 +38,10 @@ Unicon.add([
   uniBell,
   uniEllipsisH,
   uniArrowRight,
+  uniImage,
+  uniThumbsUp,
+  uniChat,
+  uniShare,
 ])
 
 Vue.use(Unicon)

@@ -1,7 +1,5 @@
 <template>
-  <button
-    class="rounded-lg p-[10px] hover:bg-gray-700 duration-300 box-equal gap-x-[10px] w-full"
-  >
+  <button class="rounded-lg p-[10px] box-equal gap-x-[10px] w-full">
     <!-- img -->
     <div
       class="w-[30px] h-[30px] bg-center bg-cover rounded-full relative"

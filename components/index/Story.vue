@@ -14,13 +14,11 @@
 
     <!-- bg img -->
     <div
-      class="absolute inset-0 bg-cover bg-center hover:scale-110 duration-300"
+      class="absolute inset-0 bg-cover bg-center hover:scale-110"
       :style="{ backgroundImage: 'url(https://picsum.photos/100/200)' }"
     >
       <!-- gray overlay -->
-      <div
-        class="absolute z-10 inset-0 bg-black opacity-0 hover:opacity-10 duration-300"
-      />
+      <div class="absolute z-10 inset-0 bg-black opacity-0 hover:opacity-10" />
     </div>
   </button>
 </template>

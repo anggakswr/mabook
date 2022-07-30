@@ -4,7 +4,7 @@
       v-for="link in links"
       :key="link.icon"
       :to="link.url"
-      class="box-center hover:bg-gray-600 rounded-lg"
+      class="box-center rounded-lg"
     >
       <client-only>
         <unicon
@@ -36,6 +36,6 @@ export default {
 
 <style scoped>
 a.nuxt-link-exact-active {
-  @apply border-b-2 border-blue-500 rounded-none hover:bg-gray-700;
+  @apply border-b-2 border-blue-500 hover:bg-gray-700 rounded-none;
 }
 </style>

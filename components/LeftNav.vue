@@ -5,11 +5,11 @@
   >
     <NuxtLink
       to="/profile"
-      class="box-equal p-[10px] gap-x-[10px] hover:bg-gray-600 w-full rounded-lg"
+      class="box-equal p-[10px] gap-x-[10px] w-full rounded-lg"
     >
       <!-- img -->
       <div
-        class="w-[24px] h-[24px] min-w-[24px] min-h-[24px] max-w-[24px] max-h-[24px] rounded-full"
+        class="w-[24px] h-[24px] min-w-[24px] min-h-[24px] max-w-[24px] max-h-[24px] rounded-full bg-center bg-cover"
         :style="{ backgroundImage: 'url(https://picsum.photos/40)' }"
       />
 
@@ -21,11 +21,11 @@
       v-for="link1 in links1"
       :key="'left-sidenav-link-' + link1.icon"
       :to="link1.url"
-      class="box-equal p-[10px] gap-x-[10px] hover:bg-gray-600 w-full rounded-lg"
+      class="box-equal p-[10px] gap-x-[10px] w-full rounded-lg"
     >
       <!-- icon -->
       <client-only>
-        <unicon :name="link1.icon" fill="white" />
+        <unicon :name="link1.icon" fill="#0a84ff" />
       </client-only>
 
       <!-- text -->

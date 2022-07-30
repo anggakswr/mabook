@@ -1,25 +1,21 @@
 <template>
   <div>
     <!-- stories -->
-    <section class="grid grid-cols-5 gap-x-[10px] relative">
-      <!-- story -->
-      <IndexCreateStory />
-      <IndexStory />
-      <IndexStory />
-      <IndexStory />
-      <IndexStory />
+    <IndexStories />
 
-      <!-- right arrow -->
-      <div class="absolute inset-y-0 -right-[20px] box-equal">
-        <button
-          class="w-[40px] h-[40px] rounded-full bg-gray-700 hover:bg-gray-600 box-center"
-        >
-          <!-- icon -->
-          <client-only>
-            <unicon name="arrow-right" fill="white" />
-          </client-only>
-        </button>
+    <section class="px-[30px]">
+      <div class="rounded-lg bg-gray-700 p-[10px] mb-[20px]">
+        <!-- input box (to create new status) -->
+        <IndexInputBox />
+
+        <!-- video btn & img btn -->
+        <IndexBtns />
       </div>
+
+      <!-- stasuses -->
+      <IndexStatus />
+      <IndexStatus />
+      <IndexStatus />
     </section>
   </div>
 </template>
