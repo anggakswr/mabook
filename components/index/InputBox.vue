@@ -13,12 +13,24 @@
     <!-- popup btn -->
     <button
       class="box-equal text-left text-gray-300 bg-gray-600 hover:brightness-125 rounded-full h-[40px] p-[10px] w-full"
+      @click="popupOn = true"
     >
       Apa yang Anda pikirkan, Angga?
     </button>
+
+    <Popup v-model="popupOn" />
   </div>
 </template>
 
 <script>
-export default {}
+import Popup from './input-box/Popup.vue'
+
+export default {
+  components: { Popup },
+  data() {
+    return {
+      popupOn: false,
+    }
+  },
+}
 </script>

@@ -12,12 +12,18 @@
     </div>
 
     <!-- name -->
-    <p>Angga</p>
+    <p>{{ person.name }}</p>
   </button>
 </template>
 
 <script>
 export default {
   name: 'RightNavPerson',
+  props: {
+    person: {
+      type: Object,
+      required: true,
+    },
+  },
 }
 </script>

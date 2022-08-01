@@ -1,6 +1,6 @@
 <template>
   <div class="mb-[20px] rounded-lg bg-gray-700 p-[10px]">
-    <IndexStatusHeader :id="post.id" />
+    <IndexStatusHeader />
 
     <p class="text-xl my-[10px]">{{ post.title }}</p>
 

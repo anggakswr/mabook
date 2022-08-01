@@ -6,7 +6,7 @@
       <NuxtLink to="#" class="rounded-full">
         <div
           class="w-[40px] h-[40px] min-w-[40px] min-h-[40px] max-w-[40px] max-h-[40px] rounded-full bg-center bg-cover"
-          :style="{ backgroundImage: `url(https://picsum.photos/4${id})` }"
+          :style="{ backgroundImage: 'url(https://picsum.photos/40)' }"
         />
       </NuxtLink>
 
@@ -29,11 +29,5 @@
 <script>
 export default {
   name: 'IndexStatusHeader',
-  props: {
-    id: {
-      type: Number,
-      required: true,
-    },
-  },
 }
 </script>

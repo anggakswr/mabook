@@ -9,11 +9,53 @@
 
     <RightNavKontakHeader />
 
-    <!-- chats -->
-    <RightNavPerson v-for="number in 10" :key="'person-' + number" />
+    <!-- chats skeleton -->
+    <template v-if="loading">
+      <RightNavPersonSkeleton />
+      <RightNavPersonSkeleton />
+      <RightNavPersonSkeleton />
+    </template>
+
+    <template v-else>
+      <!-- chats -->
+      <RightNavPerson
+        v-for="(user, index) in users"
+        :key="'person-' + user.id + index"
+        :person="user"
+      />
+    </template>
   </nav>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      loading: false,
+      users: [],
+    }
+  },
+  async fetch() {
+    await this.getUsers()
+  },
+  methods: {
+    async getUsers() {
+      this.loading = true
+
+      try {
+        const res = await this.$axios.get(
+          'https://jsonplaceholder.typicode.com/users'
+        )
+
+        // console.log('getUsers res', res.data)
+
+        this.users = res.data
+      } catch {
+        // show err popup
+      }
+
+      this.loading = false
+    },
+  },
+}
 </script>
