@@ -4,7 +4,7 @@
       v-for="link in links"
       :key="link.icon"
       :to="link.url"
-      class="box-center rounded-lg"
+      class="box-center hover:rounded-lg"
     >
       <client-only>
         <unicon
@@ -19,9 +19,9 @@
 <script>
 const links = [
   { url: '/', icon: 'estate' },
+  { url: '/groups', icon: 'users-alt' },
   { url: '#', icon: 'video' },
   { url: '#', icon: 'store' },
-  { url: '#', icon: 'users-alt' },
   { url: '#', icon: 'basketball' },
 ]
 

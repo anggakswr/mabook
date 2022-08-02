@@ -83,10 +83,7 @@ export default {
 
       try {
         const payload = { title: this.title }
-        const res = await this.$axios.post(
-          'https://jsonplaceholder.typicode.com/postsasdasd',
-          payload
-        )
+        const res = await this.$axios.post('/api/posts', payload)
 
         // console.log('submit res', res.data)
 

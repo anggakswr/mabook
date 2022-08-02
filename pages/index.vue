@@ -43,6 +43,11 @@ export default {
   async fetch() {
     await this.getPosts()
   },
+  head() {
+    return {
+      title: 'Home | Mabook',
+    }
+  },
   computed: {
     posts: {
       get() {
@@ -58,9 +63,7 @@ export default {
       this.loading = true
 
       try {
-        const res = await this.$axios.get(
-          'https://jsonplaceholder.typicode.com/posts'
-        )
+        const res = await this.$axios.get('/api/posts')
 
         // console.log('getPosts res.data', res.data)
 

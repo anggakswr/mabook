@@ -16,6 +16,11 @@
 
       <button
         class="text-xl ml-4 w-[40px] h-[40px] min-w-[40px] min-h-[40px] max-w-[40px] max-h-[40px] rounded-full box-center"
+        :class="{
+          'bg-red-400 hover:bg-red-300': snackbar && snackbar.type === 'error',
+          'bg-green-500 hover:bg-green-400':
+            snackbar && snackbar.type === 'success',
+        }"
         @click="$store.commit('setSnackbar', null)"
       >
         &times;
@@ -36,7 +41,7 @@ export default {
     snackbar(newVal) {
       if (newVal) {
         setTimeout(() => {
-          this.$store.commit('setSnackbar', '')
+          this.$store.commit('setSnackbar', null)
         }, 5000)
       }
     },

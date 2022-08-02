@@ -43,9 +43,7 @@ export default {
       this.loading = true
 
       try {
-        const res = await this.$axios.get(
-          'https://jsonplaceholder.typicode.com/users'
-        )
+        const res = await this.$axios.get('/api/users')
 
         // console.log('getUsers res', res.data)
 
