@@ -31,7 +31,7 @@
 
         <!-- textarea -->
         <textarea
-          v-model="text"
+          v-model="title"
           rows="5"
           placeholder="Apa yang anda pikirkan?"
           class="w-full bg-gray-700 text-xl focus:outline-none rounded-lg"
@@ -40,7 +40,7 @@
         <!-- blue btn -->
         <button
           class="bg-blue-500 font-semibold rounded-lg py-[10px] w-full"
-          :disabled="!text || loading"
+          :disabled="!title || loading"
           @click="submit"
         >
           Kirim
@@ -73,7 +73,7 @@ export default {
   },
   data() {
     return {
-      text: '',
+      title: '',
       loading: false,
     }
   },
@@ -82,17 +82,23 @@ export default {
       this.loading = true
 
       try {
-        const payload = { text: this.text }
+        const payload = { title: this.title }
         const res = await this.$axios.post(
-          'https://jsonplaceholder.typicode.com/posts',
+          'https://jsonplaceholder.typicode.com/postsasdasd',
           payload
         )
 
-        console.log('submit res', res.data)
+        // console.log('submit res', res.data)
 
         // this.users = res.data
+
+        this.$store.commit('home/setNewPost', res.data)
       } catch {
         // show err popup
+        this.$store.commit('setSnackbar', {
+          msg: 'Maaf terjadi kesalahan saat posting',
+          type: 'error',
+        })
       }
 
       this.loading = false

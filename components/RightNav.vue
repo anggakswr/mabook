@@ -52,6 +52,10 @@ export default {
         this.users = res.data
       } catch {
         // show err popup
+        this.$store.commit('setSnackbar', {
+          msg: 'Maaf terjadi kesalahan saat menampilkan daftar user',
+          type: 'error',
+        })
       }
 
       this.loading = false

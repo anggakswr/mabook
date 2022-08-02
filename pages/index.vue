@@ -22,8 +22,8 @@
       <!-- stasuses -->
       <template v-else>
         <IndexStatus
-          v-for="(post, index) in posts"
-          :key="'post-' + post.id + index"
+          v-for="post in posts"
+          :key="'post-' + post.id"
           :post="post"
         />
       </template>
@@ -37,11 +37,21 @@ export default {
   data() {
     return {
       loading: false,
-      posts: [],
+      // posts: [],
     }
   },
   async fetch() {
     await this.getPosts()
+  },
+  computed: {
+    posts: {
+      get() {
+        return this.$store.state.home.posts
+      },
+      set(val) {
+        this.$store.commit('home/setPosts', val)
+      },
+    },
   },
   methods: {
     async getPosts() {
@@ -57,6 +67,10 @@ export default {
         this.posts = res.data
       } catch {
         // show err popup
+        this.$store.commit('setSnackbar', {
+          msg: 'Maaf terjadi kesalahan saat menampilkan daftar post',
+          type: 'error',
+        })
       }
 
       this.loading = false

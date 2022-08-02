@@ -12,6 +12,9 @@
     </section>
 
     <RightNav />
+
+    <!-- snackbar in left bottom -->
+    <Snackbar />
   </main>
 </template>
 
