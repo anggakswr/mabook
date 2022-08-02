@@ -15,7 +15,19 @@
 </template>
 
 <script>
+import pathToTitle from '@/helpers/pathToTitle'
+
 export default {
   name: 'GroupsLayout',
+  head() {
+    return {
+      title: this.pathFormatted,
+    }
+  },
+  computed: {
+    pathFormatted() {
+      return pathToTitle(this.$route.path.substring(1)) + ' | Mabook'
+    },
+  },
 }
 </script>

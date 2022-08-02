@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'mabook',
+    title: '%s | Mabook',
     htmlAttrs: {
       lang: 'en',
     },
